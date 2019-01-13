@@ -15,4 +15,5 @@ RUN apk --update add --virtual build-dependencies ruby-dev build-base && \
     apk del build-dependencies && \
     rm -rf /var/cache/apk/*
 
-CMD /app/bin/ssh_scan
+ENTRYPOINT ["/app/bin/ssh_scan"]
+CMD ["-h"]
